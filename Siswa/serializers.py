@@ -5,4 +5,4 @@ from Siswa.models import Siswa
 class SiswaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Siswa
-        field = ('no_siswa', 'nama', 'usia', 'nama_wali')
+        field = '__all__'

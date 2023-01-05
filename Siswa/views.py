@@ -6,14 +6,13 @@ from rest_framework import status
 from Siswa.models import Siswa
 from Siswa.serializers import SiswaSerializer
 from rest_framework.decorators import api_view
-import requests
 # Create your views here.
 
 
 @api_view(['GET', 'POST','DELETE'])
 def siswa_list(request):
     # Show All
-    if requests.method == 'GET':
+    if request.method == 'GET':
         siswa = Siswa.objects.all()
         no_siswa = request.GET.get('no_siswa',None)
         if no_siswa is not None:
