@@ -18,6 +18,7 @@ def siswa_list(request):
         if no_siswa is not None:
             siswa = siswa.filter(no_siswa__icontains=no_siswa)
         siswa_serializer = SiswaSerializer(siswa, many=True)
+        return JsonResponse(siswa_serializer.data, safe=False)
         
     # Create Object
     elif request.method == 'POST':
@@ -29,7 +30,7 @@ def siswa_list(request):
         return JsonResponse(siswa_serializer.errors, status = status.HTTP_400_BAD_REQUEST)
     
     
-@api_view(['GET', 'POST','DELETE'])
+@api_view(['GET', 'PUT','DELETE'])
 def siswa_detail(request, pk):
     try:
         siswa = Siswa.objects.get(pk=pk)
