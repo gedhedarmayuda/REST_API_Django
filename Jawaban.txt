@@ -1,0 +1,15 @@
+1. REST API adalah jenis antarmuka (interface) yang digunakan berkomunikasi antara satu program 
+dengan program yang lain yang menerapkan prinsip-prinsip REST, yaitu Uniform Interface, Client-Server, 
+Stateless, Cacheable, Layered System, Code on Demand (Optional).
+2. https://github.com/gedhedarmayuda/REST_API_Django
+3. Headless architecture adalah konsep pengembangan software yang memisahkan antara frontend dan backend.
+	kelebihannya dibandingkan menyajikan frontend secara langsung adalah:
+	a. Setiap fitur dapat ditambahkan dan diuji secara terpisah tanpa harus mengangu keseluruhan 
+	sistem dalam software tersebut.
+	b. Lebih aman karena ketika terjadi serangan hacking yang menargetkan frontend data akan lebih 
+	aman karena adanya API yang menjebatani antara frontend dan backend.
+	c. Efesiensi biaya karena headless architecture membagi frontend dan backend menjadi 
+	beberapa bagian yang nantinya dapat digunakan kembali sehingga memudahkan para developer untuk 
+	mengotak-atik codingannya tanpa harus membongkar keseluruhan software.
+	d. Efesiensi waktu karena ada beberapa operasi dari frontend yang dapat di 
+	automasi dengan mengunakkan backend sehingga tidak harus mengkoding dari awal lagi.
