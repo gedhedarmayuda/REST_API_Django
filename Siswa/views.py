@@ -56,3 +56,14 @@ def siswa_detail(request, pk):
         siswa.delete()
         return JsonResponse({'message':'Siswa telah berhasil dihapus'}, status=status.HTTP_204_NO_CONTENT)
     
+    # Delete all Object
+    elif request.method == 'DELETE':
+        count = Siswa.objects.all().delete()
+        return JsonResponse({'message':'{} Siswa telah dihapus'.format(count[0])}, status = status.HTTP_204_NO_CONTENT)
+    
+@api_view(['GET'])
+def siswa_list_published(request):
+    siswa = Siswa.objects.filter(published=True)
+    if request.method == 'GET':
+        siswa_serializer = SiswaSerializer(siswa, many=True)
+        return JsonResponse(siswa_serializer.data, safe=False)
