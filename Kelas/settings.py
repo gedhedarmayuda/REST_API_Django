@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Siswa.apps.SiswaConfig',
     'rest_framework',
-    'Siswa',
     'corsheaders',
 ]
 
